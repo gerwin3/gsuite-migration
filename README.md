@@ -19,7 +19,7 @@ This repository contains a Google Apps Script to help you migrate personal Googl
 ### Important Notes
 
 * For all files in the source folder of which you (the one executing the transfer script) are the owner, it will move them and keep metadata, revision history and comments.
-* For files that you are not the owner of, you can choose to copy them instead of moving or skip them altogether (through the `COPY_IF_MOVE_FAILS` setting).
+* For files that you are not the owner of, you can choose to copy them instead of moving or skip them altogether (through the `COPY_IF_MOVE_FAILS` setting). The source file will be tagged with `[DEPRECATED] [DO NOT USE]`. You should remove them yourself.
 * The script can be stopped and reran and it should continue without any loss of data. This is useful if you run into the execution limit. Just keep running the script until it completes and prints "Transfer completed.".
 * If you keep hitting the execution limit, you can manually split up the transfer by starting with subfolders. Manually create the subfolder on the target and set the subfolder source and target correctly.
 * The script will skip any files that have the string `[DEPRECATED]` in their name. The script can also be programmed to exclude certain folders.
