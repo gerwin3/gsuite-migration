@@ -48,7 +48,7 @@ function transferFromFolderToSharedDriveRecursive(parentSrc, parentDst) {
     var subfilesSrc = parentSrc.getFiles();
     while (subfilesSrc.hasNext()) {
       var subfileSrc = subfilesSrc.next();
-      if (parentDst.getFilesByName('[DEPRECATED] [DO NOT USE] ' + subfileSrc.getName()).hasNext()) {
+      if (parentDst.getFilesByName(subfileSrc.getName()).hasNext()) {
         Logger.log("[TRANSFER] Skipping file " + subfileSrc.getName() + " (in folder " + parentSrc.getName() + ") because it already exists in target.");
         continue;
       }
